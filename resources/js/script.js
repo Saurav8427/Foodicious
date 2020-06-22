@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    /* Sticky Navigation */
+    /* ***************** Sticky Navigation ***************** */
 
     $('.js--section-features').waypoint(function(direction) {
         if (direction == "down") {
@@ -13,7 +13,8 @@ $(document).ready(function() {
         offset: '60px;'
     });
 
-    /* Scroll on buttons */
+
+    /* ***************** Scroll on buttons ***************** */
 
     // This functions scrolls the screen to the plans section with speed of 1s=1000ms
     $('.js--scroll-to-plans').click(function() {
@@ -27,7 +28,9 @@ $(document).ready(function() {
         }, 1000);
     });
 
-    /* Navigation Scroll */
+
+    /***************************************************************************** */
+    /************************* Navigation Scroll (Plugin) ************************ */
 
     // Select all links with hashes
     $('a[href*="#"]')
@@ -66,7 +69,11 @@ $(document).ready(function() {
         }
     });
 
-    /* Animation on scroll */
+    /******************************* (Plugin Ends) ******************************* */
+    /***************************************************************************** */
+
+
+    /* ***************** Animation on scroll ***************** */
 
     $('.js--wp-1').waypoint(function(direction) {
         $('.js--wp-1').addClass('animate__animated animate__fadeIn');
@@ -93,7 +100,7 @@ $(document).ready(function() {
     });
 
 
-    /* Mobile nav*/
+    /* ***************** Mobile nav ***************** */
 
     $('.js--nav-icon').click(function() {
         var nav = $('.js--main-nav');
@@ -105,15 +112,18 @@ $(document).ready(function() {
     });
 
 
-    /* Rough code for understanding */
+
+    /* ***************** Rough code for understanding ***************** */
 
     /*
+    // Waypoint snippet
     var waypoints = $('#handler-first').waypoint(function(direction) {
         notify(this.element.id + ' hit 25% from top of window') 
     }, {
         offset: '25%'
     })
 
+    // jQuery code snippet
     $("h1").click(function() { 
         $(this).css("background-color", "#aaa");
     })
